@@ -6,7 +6,48 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
 	   <meta name="description" content="Click in the map on the left to see the opposite point on the globe">
 	   <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	  
+	<link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/css/main.css">
+	<script src="https://js.arcgis.com/4.18/"></script>
 
+	  <style>
+	
+		  body {
+		
+			  width: 100vw;
+			  height: 100vh;
+			  margin: 0;
+			  
+		  }
+		  
+		  div {
+			  width: 100%;
+			  height: 100%;
+			  
+		  }
+		  
+	  </style>
+	  
+	      <script>
+      require(["esri/config","esri/Map", "esri/views/MapView"], function (esriConfig,Map, MapView) {
+
+        esriConfig.apiKey = "AAPK8e9211bb8e014b6faf0b3ac5b5f62d1clDru_9sheD0P6kOWUleAB7Htfd1E6RLTXtZLnu97RhuRMV2N0-53I2RhFXwoj9Lq";
+
+        const map = new Map({
+          basemap: "arcgis-topographic" // Basemap layer service
+        });
+
+      });
+		      
+	const view = new MapView({
+          map: map,
+          center: [-118.805, 34.027], // Longitude, latitude
+          zoom: 13, // Zoom level
+          container: "map" // Div element
+        });
+		      
+    </script>
+	  
   </head>
   
   <body id="body">
